@@ -30,7 +30,7 @@ main{
 }
 .game__cards{
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 10px;
   margin: auto;
   width: 720px;
@@ -48,7 +48,7 @@ main{
   bottom: 0;
   right: 0;
   left: 0;
-  background: #F27922;
+  background: #3c3e5c;
   display: flex;
   align-items: center;
   justify-content: center;
