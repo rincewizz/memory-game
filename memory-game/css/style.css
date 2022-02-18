@@ -16,6 +16,11 @@ main{
 .header{
 
 }
+.header__title{
+  text-align: center;
+  color: #797b92;
+  text-shadow: 2px 2px 2px #06070b;
+}
 .container{
   max-width: 1440px;
   margin: 0 auto;
@@ -196,6 +201,9 @@ main{
 }
 .footer a{
   font-size: 22px;
+  font-size: 22px;
+  color: #797b92;
+  text-decoration: none;
 }
 .footer__container{
   display: flex;
