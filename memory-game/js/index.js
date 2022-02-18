@@ -129,7 +129,7 @@ let game = {
       if(this.lock) return;
 
       let card = e.target.closest(".card");
-      if(!card || card.card.hasMatch) return;
+      if(!card || card.card.hasMatch || card.card.opened) return;
 
       this.openCard(card.card);
 
