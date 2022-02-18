@@ -26,7 +26,8 @@ main{
 }
 
 .game{
-
+  position: relative;
+  padding-bottom: 50px; 
 }
 .game__cards{
   display: grid;
@@ -34,6 +35,108 @@ main{
   grid-gap: 10px;
   margin: auto;
   width: 720px;
+  padding-bottom: 20px;  
+}
+.game__win{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background: rgb(0 0 0 / 50%);
+  backdrop-filter: blur(4px);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.game__win--show{
+  visibility: visible;
+  opacity: 1;
+}
+.game__win-text{
+  flex: 1 0 100%;
+  text-align: center;
+  font-size: 60px;
+  color: #d86c6c;
+  padding-bottom: 10px;  
+}
+.game__win button{
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.game__play-btn{
+  background: #9dd8bf;
+  border: 1px solid #126843;
+  color: #126843;
+}
+.game__play-btn:hover{
+  background: #baffe2;
+}
+.game__results-btn{
+  background: #3bb9d9;
+  border: 1px solid #1e5a6a;
+  color: #1e5a6a;
+}
+.game__results-btn:hover{
+  background: #5fdfff;
+}
+.game__results{
+  position: absolute;
+  background: rgb(0 0 0 / 90%);
+  width: 80%;
+  height: 80%;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #4a4c6e;
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  color: #b2b2b2;
+}
+.game__results--show{
+  visibility: visible;
+  opacity: 1;
+}
+.game__results-text{
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+.game__results-table{
+  margin: 20px auto;
+  width: 290px;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  border: 1px solid;
+}
+.game__results-table td, 
+.game__results-table th{
+    border: 1px solid #868686;
+}
+.game__results-close{
+  background: #c25f5f;
+  border: 1px solid #623030;
+  color: #623030;
+}
+.game__results-close:hover{
+  background: #e67777;
+}
+.game__steps{
+  text-align: center;
+  font-size: 24px;
+  color: #6b6d88;
 }
 .card{
   padding-bottom: 100%;
