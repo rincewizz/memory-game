@@ -112,6 +112,7 @@ let game = {
     this.gameWinElement.classList.add("game__win");
     this.gameWinElement.innerHTML=`
       <div class="game__win-text">Победа!</div>
+      <div class="game__win-steps">Затрачено ходов: <span class="game__win-steps-count"></span></div>
       <div class="game__win-action">
         <button class="game__play-btn">Играть еще</button>
         <button class="game__results-btn">Результаты</button>
@@ -176,9 +177,10 @@ let game = {
   },
   win(){
     this.saveResults();
+    this.gameWinElement.querySelector(".game__win-steps-count").innerText=this.step;
     let table = this.gameWinElement.querySelector(".game__results-table");
-    table.innerHTML=`<tr><th>№</th><th>Шаги</th></tr>`;
-
+    table.innerHTML=`<tr><th>№</th><th>Ходы</th></tr>`;
+    
     for(let i=0; i<this.results.length; i++){
       table.insertAdjacentHTML("beforeend",`<tr><td>${i+1}</td><td>${this.results[i]}</td></tr>`);
     }     
