@@ -65,7 +65,7 @@ let game = {
   openedCount : 0,
   results : [],
   init({selector=".game"}){
-    this.results = JSON.parse(window.localStorage.getItem("results", this.results));
+    this.results = JSON.parse(window.localStorage.getItem("results", this.results)) || [];
     this.rootElement = document.querySelector(selector);    
     this.render();
     this.start();
