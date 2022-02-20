@@ -176,6 +176,7 @@ let game = {
     this.gameStepsElement.children[0].innerText=this.step;
   },
   win(){
+    this.openedCount=0;
     this.saveResults();
     this.gameWinElement.querySelector(".game__win-steps-count").innerText=this.step;
     let table = this.gameWinElement.querySelector(".game__results-table");
